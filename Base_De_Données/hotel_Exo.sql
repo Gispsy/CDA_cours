@@ -107,3 +107,55 @@ JOIN hotel ON hotel.hot_id = chambre.cha_id
 --Exo 13--
 
 --Compter le nombre d’hôtel par station--
+
+SELECT sta_nom,
+COUNT(hot_sta_id) AS NombreHotel
+FROM station
+JOIN hotel on hotel.hot_sta_id = station.sta_id
+GROUP BY sta_nom
+
+--Exo 14--
+
+--Compter le nombre de chambre par station--
+
+SELECT sta_nom,
+COUNT(cha_numero) AS NombreChambre
+FROM station
+JOIN hotel on hotel.hot_sta_id = station.sta_id
+JOIN chambre on chambre.cha_hot_id = hotel.hot_id
+GROUP BY sta_id
+
+--Exo 15--
+
+--Compter le nombre de chambre par station ayant une capacité > 1--
+
+SELECT sta_nom,
+COUNT(cha_id) AS NombreChambre
+FROM station
+JOIN hotel on hotel.hot_id = station.sta_id
+JOIN chambre on chambre.cha_hot_id = hotel.hot_id
+GROUP BY sta_id
+HAVING COUNT(cha_id) >= 1
+
+--Exo 16--
+
+-- Afficher la liste des hôtels pour lesquels Mr Squire a effectué une réservation--
+
+SELECT cli_nom, hot_nom
+FROM client
+JOIN reservation ON reservation.res_cli_id = client.cli_id
+JOIN chambre ON chambre.cha_id = reservation.res_cha_id
+JOIN hotel ON hotel.hot_id = chambre.cha_hot_id
+WHERE cli_nom = 'Squire'
+
+--Exo 17--
+
+-- Afficher la durée moyenne des réservations par station--
+
+SELECT sta_id, sta_nom,
+AVG(DATEDIFF(res_date_fin, res_date_debut)) AS MoyenReservation
+FROM reservation
+JOIN chambre ON chambre.cha_id = reservation.res_cha_id
+JOIN hotel ON hotel.hot_id = chambre.cha_hot_id
+JOIN station ON station.sta_id = hotel.hot_sta_id
+GROUP BY sta_id
