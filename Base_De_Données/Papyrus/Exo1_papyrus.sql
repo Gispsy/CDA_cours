@@ -146,11 +146,100 @@ WHERE prix1 < (SELECT MIN(prix1)
 
 --Editer la liste des fournisseurs susceptibles de livrer les produits dont le stock est inférieur ou égal à 150 % du stock d'alerte. La liste est triée par produit puis fournisseur
 
-SELECT nomfou,
-SUM(stkale) AS TotalStockAlert,
-SUM(stkale) * 100 AS Pourcentage
-FROM fournis
-JOIN entcom ON entcom.numfou = fournis.numfou
-JOIN ligcom ON ligcom.numcom = ligcom.numcom
-JOIN produit ON produit.codart = ligcom.codart
+SELECT nomfou, produit.libart, nomfou, stkphy, stkale,
+100*stkphy/qteann as PourcentageStkphy,
+100*stkale/qteann as PourcentageStkale
+FROM produit
+JOIN vente ON vente.codart = produit.codart
+JOIN ligcom ON ligcom.codart = produit.codart
+JOIN entcom ON entcom.numcom = ligcom.numcom
+JOIN fournis ON fournis.numfou = vente.numfou
+WHERE 100*stkphy/qteann <= stkale*1.5
+group by libart
+
+--Exo 16--
+
+SELECT nomfou, produit.libart, nomfou, stkphy, stkale,
+100*stkphy/qteann as PourcentageStkphy,
+100*stkale/qteann as PourcentageStkale
+FROM produit
+JOIN vente ON vente.codart = produit.codart
+JOIN ligcom ON ligcom.codart = produit.codart
+JOIN entcom ON entcom.numcom = ligcom.numcom
+JOIN fournis ON fournis.numfou = vente.numfou
+WHERE 100*stkphy/qteann <= stkale*1.5 and delliv <= 30
+group by libart
+
+--Exo 17--
+
+SELECT nomfou, produit.libart, nomfou, stkphy, stkale,
+100*stkphy/qteann as PourcentageStkphy,
+100*stkale/qteann as PourcentageStkale,
+SUM(stkphy) as StockTotalFournis
+FROM produit
+JOIN vente ON vente.codart = produit.codart
+JOIN ligcom ON ligcom.codart = produit.codart
+JOIN entcom ON entcom.numcom = ligcom.numcom
+JOIN fournis ON fournis.numfou = vente.numfou
+WHERE 100*stkphy/qteann <= stkale*1.5 and delliv <= 30
+group by libart
+order by fournis.nomfou DESC
+
+--Exo 18--
+
+select nomfou, libart,
+100*stkphy/qteann as PourcentageStkphy,
+qteann*0.9 as PourcentageQteann
+from produit
+join vente on vente.codart = produit.codart
+join fournis on fournis.numfou = vente.numfou
+where 100*stkphy/qteann < qteann*0.9 and derliv LIKE'%-12-%'
+group by libart
+
+--19--
+
+SELECT nomfou, SUM(qtecde * priuni * 0.2) AS CA
+FROM ligcom
+JOIN entcom ON entcom.numcom = ligcom.numcom
+JOIN fournis ON entcom.numfou = fourni.numfou
+WHERE datcom LIKE '__93-%-%'
 GROUP BY nomfou
+
+--20--
+
+select libart, produit.codart, nomfou, fournis.numfou, numcom
+from produit
+join vente on vente.codart = produit.codart 
+join fournis on fournis.numfou = vente.numfou
+join entcom on entcom.numfou = fournis.numfou
+group by libart
+
+--Phase 2--
+
+--Exo 1--
+
+update vente 
+set 
+prix1 = prix1 + prix1*0.4,
+prix2 = prix2 + prix2*0.2
+where numfou = 9180
+
+--Exo 2--
+
+UPDATE vente
+set
+prix2 = prix1
+where prix2 = null
+
+--Exo 3 --
+
+UPDATE entcom 
+join fournis on fournis.numfou = entcom.numfou 
+set
+obscom = '*****'
+where satisf < 5
+
+--Exo 4--
+
+delete from produit 
+where codart = 'I110'
