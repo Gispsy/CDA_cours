@@ -39,8 +39,8 @@ CREATE OR REPLACE TRIGGER insert_reservation BEFORE INSERT ON hotel.reservation
     FOR EACH ROW
     BEGIN
         DECLARE NombreChambre INT;
-        SET NombreChambre = (SELECT COUNT(res_cha_id) FROM reservation JOIN chambre on chambre.cha_id = reservation.res_cha_id GROUP BY cha_hot_id)
-        if NombreChambre < 10 THEN
+        SET NombreChambre = (SELECT COUNT(res_cha_id) FROM reservation JOIN chambre on chambre.cha_id = reservation.res_cha_id WHERE reservation.res_cha_id = new.res_cha_id)
+        if NombreChambre >= 10 THEN
     SIGNAL SQLSTATE '40000' SET MESSAGE_TEXT = 'Un problème est survenu. Trop de reservation supperieur a 10';
     END IF
 END $$
@@ -53,8 +53,8 @@ CREATE OR REPLACE TRIGGER insert_reservation2 BEFORE INSERT ON hotel.reservation
     FOR EACH ROW
     BEGIN
         DECLARE CliNombreRes INT;
-        SET CliNombreRes = (SELECT COUNT(res_cha_id) FROM reservation JOIN chambre on chambre.cha_id = reservation.res_cha_id GROUP BY cha_hot_id);
-        if CliNombreRes < 3 THEN
+        SET CliNombreRes = (SELECT COUNT(res_cha_id) FROM reservation JOIN chambre on chambre.cha_id = reservation.res_cha_id WHERE reservation.res_cli_id = new.res_cli_id);
+        if CliNombreRes >= 3 THEN
     SIGNAL SQLSTATE '40000' SET MESSAGE_TEXT = 'Un problème est survenu. Trop de reservation supperieur a 3';
     END IF
 END $$

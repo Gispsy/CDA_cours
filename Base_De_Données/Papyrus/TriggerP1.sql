@@ -39,7 +39,7 @@ CREATE OR REPLACE TRIGGER insert_reservation BEFORE INSERT ON hotel.reservation
     FOR EACH ROW
     BEGIN
         DECLARE NombreChambre INT;
-        SET NombreChambre = (SELECT COUNT(res_cha_id) FROM reservation JOIN chambre on chambre.cha_id = reservation.res_cha_id GROUP BY cha_hot_id)
+        SET NombreChambre = (SELECT COUNT(res_cha_id) FROM reservation JOIN chambre on chambre.cha_id = reservation.res_cha_id GROUP BY cha_hot_id);
         if NombreChambre < 10 THEN
     SIGNAL SQLSTATE '40000' SET MESSAGE_TEXT = 'Un problème est survenu. Trop de reservation supperieur a 10';
     END IF

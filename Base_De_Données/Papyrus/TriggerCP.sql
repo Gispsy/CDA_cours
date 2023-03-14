@@ -5,7 +5,8 @@ CREATE TRIGGER maj_total AFTER INSERT ON lignedecommande
         DECLARE id_c INT;
         DECLARE tot DOUBLE;
         SET id_c = NEW.id_commande;
-        SET tot = (SELECT sum(prix*quantite) FROM lignedecommande WHERE id_commande=id_c);
+        SET remise = (SELECT remise from commande WHERE commande.id = NEW.id_commande);
+        SET tot = (SELECT sum((prix*quantite)- remise) FROM lignedecommande WHERE id_commande=id_c);
         UPDATE commande SET total=tot WHERE id=id_c;
 END $$
 
@@ -25,7 +26,8 @@ CREATE TRIGGER maj_UP AFTER UPDATE ON lignedecommande
         DECLARE id_c INT;
         DECLARE tot DOUBLE;
         SET id_c = NEW.id_commande;
-        SET tot = (SELECT sum(prix*quantite) FROM lignedecommande WHERE id_commande=id_c);
+        SET remise = (SELECT remise from commande WHERE commande.id = NEW.id_commande);
+        SET tot = (SELECT sum((prix*quantite)- remise) FROM lignedecommande WHERE id_commande=id_c);
         UPDATE commande SET total=tot WHERE id=id_c;
 END $$
 
@@ -36,9 +38,7 @@ CREATE TRIGGER maj_DEL AFTER DELETE ON lignedecommande
         DECLARE id_c INT;
         DECLARE tot DOUBLE;
         SET id_c = OLD.id_commande;
-        SET tot = (SELECT sum(prix*quantite) FROM lignedecommande WHERE id_commande=id_c);
+        SET remise = (SELECT remise from commande WHERE commande.id = NEW.id_commande);
+        SET tot = (SELECT sum((prix*quantite)- remise) FROM lignedecommande WHERE id_commande=id_c);
         UPDATE commande SET total=tot WHERE id=id_c;
 END $$
-
-DELETE FROM produit
-WHERE

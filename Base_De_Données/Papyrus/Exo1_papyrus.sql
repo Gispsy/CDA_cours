@@ -5,7 +5,7 @@
 SELECT fournis.numfou, numcom
 FROM fournis
 JOIN entcom ON entcom.numfou = fournis.numfou
-WHERE fournis.numfou = 9120
+WHERE fournis.numfou = 9120;
 
 --2--
 
@@ -15,7 +15,7 @@ SELECT fournis.numfou,
 COUNT(numcom) AS CommandePasser
 FROM fournis
 JOIN entcom ON entcom.numfou = fournis.numfou
-GROUP BY fournis.numfou
+GROUP BY fournis.numfou;
 
 --3--
 
@@ -24,7 +24,7 @@ GROUP BY fournis.numfou
 SELECT COUNT(numcom) AS Nombrecommande,
 COUNT(fournis.numfou) AS NombreFournisseur
 FROM fournis
-JOIN entcom ON entcom.numfou = fournis.numfou
+JOIN entcom ON entcom.numfou = fournis.numfou;
 
 --4--
 
