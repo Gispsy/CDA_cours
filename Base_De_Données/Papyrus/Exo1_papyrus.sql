@@ -199,7 +199,7 @@ group by libart
 
 --19--
 
-SELECT nomfou, SUM(qtecde * priuni * 0.2) AS CA
+SELECT nomfou, SUM(qtecde * priuni) * 1.2 AS CA
 FROM ligcom
 JOIN entcom ON entcom.numcom = ligcom.numcom
 JOIN fournis ON entcom.numfou = fourni.numfou
