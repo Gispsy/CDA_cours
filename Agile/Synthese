@@ -1,0 +1,31 @@
+Donnez une définition de l'agilité.
+
+Base d'un ensemble de 4 valeurs et 12 principes communs.
+Cycle de développement itérative et d'incrémentation en prennant en compte,
+la collaboration avec le client
+
+
+Pourquoi l'Extreme Programming ?
+
+Méthode de programation qui permet de prendre en compte les demande client,
+de pouvoir faire des modifications en temps réel.
+Effectue fréquement des révisions de code et des test unitaires.
+
+
+Quels avantages y a-t'il à utiliser SCRUM ?
+
+L'équipe travaille par courtes itération et affine les plan à mesure,
+que le travaille avance
+
+
+Sprint et intégration continue, expliquez le fonctionnement d'un sprint ?
+
+Rassemblement de personnes pour ce concentrer sur le développement d'un projet.
+Grace a la méthode de gestion Extreme Programming.
+
+
+TDD :(Test Driven Development), recherchez des informations pour expliquer le principe.
+
+Méthode de développement de logiciel qui effectue des itérations successives très courtes, 
+que chaque itération est accomplie en formulant un sous-problème à résoudre sous forme de 
+test avant d'écrire le code sources.
