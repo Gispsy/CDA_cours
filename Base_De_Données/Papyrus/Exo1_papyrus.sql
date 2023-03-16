@@ -67,8 +67,9 @@ SELECT numcom,
 SUM(qtecde) AS TotalQtecde,
 SUM(priuni) AS TotalPriuni,
 SUM(qteliv) AS TotalQteliv
+SUM(qteliv*priuni) AS Total
 FROM ligcom
-GROUP BY numcom
+GROUP BY numcom DESC
 
 --9--
 
