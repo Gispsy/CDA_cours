@@ -155,7 +155,7 @@ JOIN vente ON vente.codart = produit.codart
 JOIN ligcom ON ligcom.codart = produit.codart
 JOIN entcom ON entcom.numcom = ligcom.numcom
 JOIN fournis ON fournis.numfou = vente.numfou
-WHERE 100*stkphy/qteann <= stkale*1.5
+WHERE stkphy<= stkale*1.5
 group by libart
 
 --Exo 16--
@@ -168,7 +168,7 @@ JOIN vente ON vente.codart = produit.codart
 JOIN ligcom ON ligcom.codart = produit.codart
 JOIN entcom ON entcom.numcom = ligcom.numcom
 JOIN fournis ON fournis.numfou = vente.numfou
-WHERE 100*stkphy/qteann <= stkale*1.5 and delliv <= 30
+WHERE stkphy<= stkale*1.5 and delliv <= 30
 group by libart
 
 --Exo 17--
@@ -182,7 +182,7 @@ JOIN vente ON vente.codart = produit.codart
 JOIN ligcom ON ligcom.codart = produit.codart
 JOIN entcom ON entcom.numcom = ligcom.numcom
 JOIN fournis ON fournis.numfou = vente.numfou
-WHERE 100*stkphy/qteann <= stkale*1.5 and delliv <= 30
+WHERE stkphy<= stkale*1.5 and delliv <= 30
 group by libart
 order by fournis.nomfou DESC
 
