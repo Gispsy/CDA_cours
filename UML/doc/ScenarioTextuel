@@ -1,0 +1,17 @@
+1: Quand un client demande un umprunt d'un document il doit passer par un employer ou un bénévole 
+
+2: L'employer / bénévole doit verifier avant l'umprunt si le client a une carte de lecteur sur la machine,
+la machine affiche la fiche client grace au n° lecteur.
+
+3: Si le client a bien une carte valide il va pouvoir ouvrire la fenetre pour l'enregistrement de l'emprunt
+ou il va rentrer le n°lecteur de la carte avec la cote document 
+
+4: Le systeme vas verifier grace au cote document que le document est bien diponible a l'emprunt puis il 
+verifie que le client a une cotisation et moins de 5 emprunts en cours
+
+5a: si valide une fenetre de validation de l'emprunt s'ouvre pour valider et apres la validation 
+l'emprunt peut etre effectuer 
+
+5b: Si non valide le logiciel signal pourquoi la validation n'a pas aboutie
+
+6: enregistrement des donnée taper par l'employer puis l'emprunt peut etre effectuer
