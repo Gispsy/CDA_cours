@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Ducamp Jarod"> 
+        <title>Liste</title>
+    </head>
+    <body>
+        <nav>
+            <a href="HtmlPresentation.html" title="Nous contacter">Page Accueil</a><br>
+            <a href="HtmlPresentationPage02.html" title="Nous contacter">Page 2</a><br>
+            <a href="HtmlPresentationVideoImage.html" title="Nous contacter">Page Video/Image</a><br>
+            <a href="HtmlPresentationFormulaire.html" title="Nous contacter">Formulaire</a><br>
+            <a href="HtmlPresentationListe.html" title="Nous contacter">Page Liste</a> 
+        </nav>
+        <article>
+            <fieldset>
+                <legend>Test Tableau</legend>
+                Nom: <input type="text"><br>
+                Email: <input type="text"><br>
+                Date de naissance: <input type="text">
+                <label>Sélectionnez votre métier</label>
+                <input type="text" name="metiers1" id="metiers2" list="metiers3"><br>
+                <datalist id="metiers3">
+                <option value="webmaster">
+                <option value="développeur">
+                <option value="administrateur B.D.D.">
+            </fieldset>
+        </article><br>
+        <section>
+            <fieldset>
+                <legend>Test 02 Tableau</legend>
+                <form method="post" action="post.php" id="monform" onsubmit="resultat.value
+                = parseInt(nombre1.value) + parseInt(nombre2.value); return false;">
+                <input type="number" name="nombre1" id="nombre1"> + <input type="number"
+                name="nombre2" id="nombre2"> = <output for="number1 number2"
+                name="resultat" form="monform"></output><br><br>
+                <input type="submit" name="envoi" value="Calculer">
+                </form>
+            </fieldset>
+        </section>
+        <section>
+            <fieldset>
+                <legend>Test 03 Tableau</legend>
+                <input type="text" placeholder="Entrez votre nom" pattern="^[a-z]+$"
+                required title="Entrez votre nom (que des caractères entre a et z)" />
+            </fieldset>
+        </section>
+    </body>

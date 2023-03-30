@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Ducamp Jarod"> 
+        <title>ExoFormulaire</title>
+        <style>
+            fieldset, label, input, form{
+                margin-top: auto;
+                text-align: -webkit-center;
+                display: inline-table;
+            };
+            label{
+                margin-left:0%
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Nous lançons une grande enquête sur les anciens stagiaires</h1><br>
+            <h2>merci de nous répondre</h2><br>
+        <form method="post" action = "http://bienvu.net/script.php">
+            <fieldset>
+                <legend>Vos coordonnées</legend>
+                    <label>votre nom</label>
+                        <input type="text"><br>
+                    <label>votre prenom</label>
+                        <input type="text"><br>
+                    <label>votre date de naissance</label>
+                        <input type="text"><br>
+                    <label>votre adresse</label>
+                        <input type="text"><br>
+                    <label>votre ville</label>
+                        <input type="text"><br>
+                    <label>votre code postal</label>
+                        <input type="text"><br>
+                    <label>votre e-mail</label>
+                        <input type="text"><br>
+            </fieldset><br>
+            <fieldset>
+                <label>vous êtes un homme</label>
+                    <input type="checkbox">
+                <label>vous êtes une femme</label>
+                    <input type="checkbox">
+            </fieldset><br>
+                <input type="text" name="metiers1" id="metiers2" list="metiers3"><br>
+                    <datalist id="metiers3">
+                        <option value="webmaster"></option>
+                        <option value="développeur"></option>
+                        <option value="autre"></option>
+                        <option value="administrateur B.D.D."></option><br>
+                    </datalist><br>
+                <label>si vous avez répondu autre, précisez</label>
+                    <input type="text"><br>
+                <input type="text" name="metiers" list="paye"><br>
+                    <datalist id="paye">
+                        <option value="<1000 $"></option>
+                        <option value="<1500 $"></option>
+                        <option value="<2000 $"></option><br>
+                    </datalist><br>
+                <label>en qu'elle année avez-vous suivi le stage afpa ?</label>
+                    <input type="date"><br><br>
+                <textarea name="commentaire"></textarea><br>
+                <div>merci d'avoir répondu au questionnaire</div>
+                <button>validez</button>
+                <button>annuler</button>
+        </form>
+
+    </body>

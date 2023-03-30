@@ -1,0 +1,14 @@
+body{
+    background-color: #fff;
+    margin-left: auto;
+};
+
+.div01:hover{
+
+    background-color :red;
+}
+
+a:hover{
+    color: red;
+    box-shadow: 10px 5px 5px black;
+}
