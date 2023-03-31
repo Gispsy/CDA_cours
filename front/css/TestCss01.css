@@ -1,14 +1,68 @@
 body{
     background-color: #fff;
     margin-left: auto;
-};
-
-.div01:hover{
-
-    background-color :red;
 }
 
 a:hover{
     color: red;
     box-shadow: 10px 5px 5px black;
+}
+
+.block{
+    width: 100px;
+    height: auto;
+    padding: 10px 20px 10px 20px;
+    border: 5px solid black;
+    margin: 20px 0 20px 0;
+}
+
+.jaune1 {
+    background-color: #ffff00;
+}
+
+.verte1 {
+    background-color: #00ff00;
+}
+
+.jaune {
+    position: relative;
+    bottom: 5px;
+    background-color: #ffff00;
+}
+
+body
+{
+    background-color: blue;
+}
+#centre
+{
+    margin: 1em 25%;
+    background-color: #FFF;
+}
+#gauche
+{
+    position: absolute;
+    top: 1em;
+    left: 1%;
+    width: 18%;
+}
+#droite
+{
+    position: absolute;
+    top: 1em;
+    right: 1%;
+    width: 18%;
+}
+.aqua
+{
+    background-color: #00FFFF; /* aqua */
+} 
+
+.left
+{
+    float: left;
+    width: 31.33%;
+    background-color: #00ff00;
+    margin: 1%;
+    height: 500px;
 }
