@@ -6,25 +6,52 @@
         Portfolio OpenClassrom
     </title>
     <meta charset="utf-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <header>
-        <nav class="bg-light">
+        <nav class="bg-light navbar navbar-expand-md fixed-top">
             <div class="container col-12">
-                <div class="bg-secondary py-4 w-100"></div>
+                <a class="navbar-brand text-uppercase fw-bold" href="portFolio.html">
+                    <span class="bg-primary bg-gradient p-1 rounded-3 text-light">John</span>Doe
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#johndoe">Qui suis-je ?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#expertise">Expertise</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
-    <section class="my-5">
-        <div class="container container-fluid">
-            <div class="row gy-4 gy-md-0 align-items-center">
+    <section class="my-5"> <!--premiere phase-->
+        <div class="container p-5">
+            <div class="row gy-4">
                 <div class="col-12 col-md-6">
-                    <h1>Je suis John Doe Développeur et Designe Web</h1>
-                    <h3>Bienvenue dans mon univers créatif</h2>
-                        <a href="" class="btn btn-primary">Mon expertise web</a>
+                    <h1 class="fw-bold">Je suis John Doe Développeur et Designe Web</h1>
+                    <h3 class="fw-light">Bienvenue dans mon univers créatif</h2>
+                        <a href="" class="btn btn-primary mt-5">Mon expertise web</a>
                 </div>
                 <div class="col-12 col-md-6">
                     <img src="img/portrait.jpg" class="w-100" alt="John">
@@ -32,37 +59,185 @@
             </div>
         </div>
     </section>
-    <section class="my-5 bg-light">
-        <div class="container col-12">
-            <div class="row">
-                <h1>Mon expertise</h1>
-                <h3>Développement web et design</h3>
+    <section class="my-5 bg-light"> <!--deuxieme phase-->
+        <div class="container">
+            <div class="row my-4 mt-4"> <!--Titre-->
+                <h1 class="fw-bold">Mon expertise</h1>
+                <h3 class="fw-light">Développement web et design</h3>
             </div>
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="bg-secondary py-5 w-100 h-100"></div>
+            <div class="row"> <!--Code-->
+                <div class="col-12 col-md-7 mt-3"> <!--Debut-->
+                    <div class="bg-white p-3 mb-3">
+                        <div class="row align-items-center">
+                            <div class="d-flex align-items-center col-2">
+                                <i class=" fa-2x fa-brands fa-html5 text-primary me-3"></i>
+                                <p class="fw-bold m-0">HTML5</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--Fin-->
+                    <!--Debut-->
+                    <div class="bg-white p-3 mb-3">
+                        <div class="row align-items-center">
+                            <div class="d-flex align-items-center col-2">
+                                <i class="fa-2x fa-brands fa-css3-alt text-primary me-3"></i>
+                                <p class="fw-bold m-0">CSS3</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--Fin-->
+                    <!--Debut-->
+                    <div class="bg-white p-3 mb-3">
+                        <div class="row align-items-center">
+                            <div class="d-flex align-items-center col-2">
+                                <i class="fa-2x fa-brands fa-js text-primary me-3"></i>
+                                <p class="fw-bold m-0">JS</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--Fin-->
+                    <!--Debut-->
+                    <div class="bg-white p-3 mb-3">
+                        <div class="row align-items-center">
+                            <div class="d-flex align-items-center col-2">
+                                <i class="fa-2x fa-brands fa-php text-primary me-3"></i>
+                                <p class="fw-bold m-0">PHP</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--Fin-->
+                    <!--Debut-->
+                    <div class="bg-white p-3 mb-3">
+                        <div class="row align-items-center">
+                            <div class="d-flex align-items-center col-2">
+                                <i class="fa-2x fa-brands fa-sass me-3 text-primary"></i>
+                                <p class="fw-bold m-0">SASS</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--Fin-->
+
                 </div>
-                <div class="col-md-3 offset-md-1">
-                    <img src="img/code.jpg" class="rounded float-start" width="100%">
+                <div class="col-12 col-md-4 offset-md-1 mt-3"> <!--Image code-->
+                    <img src="img/code.jpg" class="rounded float-end img-fluid" width="100%">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 col-md-4 mt-5">
+            <div class="row gy-4 mt-4">
+                <div class="col-12 col-md-4"> <!--Image bureau-->
                     <img src="img/design.jpg" class="rounded float-start img-fluid" widht="100%">
                 </div>
-                <div class="col-12 offset-md-1 col-md-7 mt-5">
-                    <div class="bg-secondary py-5 w-100 h-100"></div>
+                <div class="col-12 order-first offset-md-1 col-md-7 order-md-last">
+                    <div class="bg-white p-3 mb-3">
+                        <div class="row align-items-center">
+                            <div class="d-flex align-items-center col-2">
+                                <i class="fa-2x fa-brands fa-sass me-3 text-primary"></i>
+                                <p class="fw-bold m-0">SASS</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 mb-3">
+                        <div class="row align-items-center">
+                            <div class="d-flex align-items-center col-2">
+                                <i class="fa-2x fa-brands fa-sass me-3 text-primary"></i>
+                                <p class="fw-bold m-0">SASS</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 mb-3">
+                        <div class="row align-items-center">
+                            <div class="d-flex align-items-center col-2">
+                                <i class="fa-2x fa-brands fa-sass me-3 text-primary"></i>
+                                <p class="fw-bold m-0">SASS</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 mb-3">
+                        <div class="row align-items-center">
+                            <div class="d-flex align-items-center col-2">
+                                <i class="fa-2x fa-brands fa-sass me-3 text-primary"></i>
+                                <p class="fw-bold m-0">SASS</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 mb-3">
+                        <div class="row align-items-center">
+                            <div class="d-flex align-items-center col-2">
+                                <i class="fa-2x fa-brands fa-sass me-3 text-primary"></i>
+                                <p class="fw-bold m-0">SASS</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+
+
     </section>
     <section class="my-5">
-        <div class="container col-12 overflow-hidden col-md-6">
-            <h1>Mon portfolio</h1>
-            <h2>Projets perso et pro</h2>
+        <div class="container col-12">
+            <h1 class="fw-bold">Mon portfolio</h1>
+            <h2 class="fw-light">Projets perso et pro</h2>
             <div class="row gy-4 mt-4">
-                <div class="col-3">
-                    <div class="bg-secondary py-5 w-100 h-100"></div>
+                <div class="card col-3">
+                    <img src="https://komate.fr/wp-content/uploads/2022/08/lol.jpg?w=1024" class="card-img-top" width="auto" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
                 </div>
                 <div class="col-3">
                     <div class="bg-secondary py-5 w-100 h-100"></div>
@@ -79,8 +254,8 @@
     <section class="my-5 bg-light">
         <div class="container col-12 overflow-hidden">
             <div class="row">
-                <h1>Un projet de création web ?</h1>
-                <h3>Allons en discuter autour d'un café</h3>
+                <h1 class="fw-bold">Un projet de création web ?</h1>
+                <h3 class="fw-light">Allons en discuter autour d'un café</h3>
                 <div class="col-md-4 mt-5">
                     <img src="img/grab-a-coffee.jpg" width=100%>
                 </div>
@@ -91,23 +266,30 @@
         </div>
     </section>
     <footer class="my-5">
-        <div class="container col-12 overflow-hidden">
-            <div class="row">
+        <div class="container py-5overflow-hidden">
+            <div class="row align-items-center">
                 <div class="col-4">
                     <div class="bg-secondary py-5 w-100 h-100"></div>
                 </div>
                 <div class="col-4">
                     <div class="bg-secondary py-5 w-100 h-100"></div>
                 </div>
-                <div class="col-4">
-                    <div class="bg-secondary py-5 w-100 h-100"></div>
+                <div class="col-12 col-md-4 text-md-end">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><i class="bi bi-linkedin"></i></li>
+                        <li class="list-inline-item"><i class="bi bi-instagram"></i></li>
+                        <li class="list-inline-item"><i class="bi bi-twitter"></i></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/14273d579a.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/907a1ca8cf.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
