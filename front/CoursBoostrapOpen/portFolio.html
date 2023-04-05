@@ -62,11 +62,11 @@
     <section class="my-5 bg-light"> <!--deuxieme phase-->
         <div class="container">
             <div class="row my-4 mt-4"> <!--Titre-->
-                <h1 class="fw-bold">Mon expertise</h1>
+                <h1 class="fw-bold" id="expertise">Mon expertise</h1>
                 <h3 class="fw-light">Développement web et design</h3>
             </div>
             <div class="row"> <!--Code-->
-                <div class="col-12 col-md-7 mt-3"> <!--Debut-->
+                <div class="col-12 col-md-7 col-ms-5 my-4"> <!--Debut-->
                     <div class="bg-white p-3 mb-3">
                         <div class="row align-items-center">
                             <div class="d-flex align-items-center col-2">
@@ -74,7 +74,7 @@
                                 <p class="fw-bold m-0">HTML5</p>
                             </div>
                             <div class="col-10">
-                                <div class="progress">
+                                <div class="progress w-auto m-4">
                                     <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25"
                                         aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
@@ -89,7 +89,7 @@
                                 <p class="fw-bold m-0">CSS3</p>
                             </div>
                             <div class="col-10">
-                                <div class="progress">
+                                <div class="progress w-auto m-4">
                                     <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
                                         aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
@@ -104,7 +104,7 @@
                                 <p class="fw-bold m-0">JS</p>
                             </div>
                             <div class="col-10">
-                                <div class="progress">
+                                <div class="progress w-auto m-4">
                                     <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25"
                                         aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
@@ -119,7 +119,7 @@
                                 <p class="fw-bold m-0">PHP</p>
                             </div>
                             <div class="col-10">
-                                <div class="progress">
+                                <div class="progress w-auto m-4">
                                     <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="25"
                                         aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
@@ -134,7 +134,7 @@
                                 <p class="fw-bold m-0">SASS</p>
                             </div>
                             <div class="col-10">
-                                <div class="progress">
+                                <div class="progress w-auto m-4">
                                     <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
                                         aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
@@ -147,7 +147,7 @@
                     <img src="img/code.jpg" class="rounded float-end img-fluid" width="100%">
                 </div>
             </div>
-            <div class="row gy-4 mt-4">
+            <div class="row gy-4 mt-4 col-12 ">
                 <div class="col-12 col-md-4"> <!--Image bureau-->
                     <img src="img/design.jpg" class="rounded float-start img-fluid" widht="100%">
                 </div>
@@ -159,7 +159,7 @@
                                 <p class="fw-bold m-0">SASS</p>
                             </div>
                             <div class="col-10">
-                                <div class="progress">
+                                <div class="progress w-auto m-4">
                                     <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
                                         aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
@@ -173,7 +173,7 @@
                                 <p class="fw-bold m-0">SASS</p>
                             </div>
                             <div class="col-10">
-                                <div class="progress">
+                                <div class="progress w-auto m-4">
                                     <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
                                         aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
@@ -187,7 +187,7 @@
                                 <p class="fw-bold m-0">SASS</p>
                             </div>
                             <div class="col-10">
-                                <div class="progress">
+                                <div class="progress w-auto m-4">
                                     <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
                                         aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
@@ -201,7 +201,7 @@
                                 <p class="fw-bold m-0">SASS</p>
                             </div>
                             <div class="col-10">
-                                <div class="progress">
+                                <div class="progress w-auto m-4">
                                     <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
                                         aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
@@ -215,7 +215,7 @@
                                 <p class="fw-bold m-0">SASS</p>
                             </div>
                             <div class="col-10">
-                                <div class="progress">
+                                <div class="progress w-auto m-4">
                                     <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
                                         aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
@@ -226,53 +226,260 @@
 
 
     </section>
-    <section class="my-5">
+    <section class="my-5"> <!--Troisieme phase-->
         <div class="container col-12">
-            <h1 class="fw-bold">Mon portfolio</h1>
+            <h1 class="fw-bold" id="portfolio">Mon portfolio</h1>
             <h2 class="fw-light">Projets perso et pro</h2>
-            <div class="row gy-4 mt-4">
-                <div class="card col-3">
-                    <img src="https://komate.fr/wp-content/uploads/2022/08/lol.jpg?w=1024" class="card-img-top" width="auto" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="row gy-4 mt-4 align-items-center">
+                <div class="card-group col-12 col-mt-5 ">
+                    <div class="card col-3 mx-4">
+                        <img src="https://picsum.photos/200/100?random=4" class="card-img-top h-100" width="100px"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 1</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas"
+                                data-bs-target="#infoProjet1">En savoir plus</a>
+                            <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="infoProjet1"
+                                aria-labelledby="offcanvasBottomLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Projet 1</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body small">
+                                    <!--Carousel-->
+                                    <div id="carouselExample" class="carousel slide h-100 ">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item h-100 active" data-bs-interval="2000">
+                                                <img src="https://picsum.photos/1920/1080?random=5"
+                                                    class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://picsum.photos/1920/1080?random=6"
+                                                    class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://picsum.photos/1920/1080?random=7"
+                                                    class="d-block w-100" alt="...">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExample" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExample" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <!--Fin carousel-->
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-3">
-                    <div class="bg-secondary py-5 w-100 h-100"></div>
-                </div>
-                <div class="col-3">
-                    <div class="bg-secondary py-5 w-100 h-100"></div>
-                </div>
-                <div class="col-3">
-                    <div class="bg-secondary py-5 w-100 h-100"></div>
+                    <!--Fin card-->
+                    <div class="card col-3 mx-4">
+                        <img src="https://picsum.photos/200/100?random=3" class="card-img-top h-100" width="100px"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 2</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas"
+                                data-bs-target="#infoProjet1">En savoir plus</a>
+                            <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="infoProjet1"
+                                aria-labelledby="offcanvasBottomLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Projet 2</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body small">
+                                    <!--Carousel-->
+                                    <div id="carouselExample" class="carousel slide h-100 ">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item h-100 active" data-bs-interval="2000">
+                                                <img src="https://picsum.photos/1920/1080?random=8"
+                                                    class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://picsum.photos/1920/1080?random=9"
+                                                    class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://picsum.photos/1920/1080?random=10"
+                                                    class="d-block w-100" alt="...">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExample" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExample" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <!--Fin carousel-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-3 mx-4">
+                        <img src="https://picsum.photos/200/100?random=2" class="card-img-top h-100" width="100px"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 3</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas"
+                                data-bs-target="#infoProjet1">En savoir plus</a>
+                            <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="infoProjet1"
+                                aria-labelledby="offcanvasBottomLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Projet 1</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body small">
+                                    <!--Carousel-->
+                                    <div id="carouselExample" class="carousel slide h-100 ">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item h-100 active" data-bs-interval="2000">
+                                                <img src="https://picsum.photos/1920/1080?random=11"
+                                                    class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://picsum.photos/1920/1080?random=12"
+                                                    class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://picsum.photos/1920/1080?random=13"
+                                                    class="d-block w-100" alt="...">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExample" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExample" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <!--Fin carousel-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card col-3 mx-4">
+                        <img src="https://picsum.photos/200/100?random=1" class="card-img-top h-100" width="100px"
+                            alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Projet 4</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="offcanvas"
+                                data-bs-target="#infoProjet1">En savoir plus</a>
+                            <div class="offcanvas offcanvas-bottom h-100" tabindex="-1" id="infoProjet4"
+                                aria-labelledby="offcanvasBottomLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Projet 1</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body small">
+                                    <!--Carousel-->
+                                    <div id="carouselExample" class="carousel slide h-100 ">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item h-100 active" data-bs-interval="2000">
+                                                <img src="https://picsum.photos/1920/1080?random=14"
+                                                    class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://picsum.photos/1920/1080?random=15"
+                                                    class="d-block w-100" alt="...">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="https://picsum.photos/1920/1080?random=16"
+                                                    class="d-block w-100" alt="...">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExample" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExample" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                    <!--Fin carousel-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="my-5 bg-light">
+    <section class="my-5 bg-light"><!--Quatrieme phase-->
         <div class="container col-12 overflow-hidden">
             <div class="row">
-                <h1 class="fw-bold">Un projet de création web ?</h1>
+                <h1 class="fw-bold" id="contact">Un projet de création web ?</h1>
                 <h3 class="fw-light">Allons en discuter autour d'un café</h3>
                 <div class="col-md-4 mt-5">
                     <img src="img/grab-a-coffee.jpg" width=100%>
                 </div>
+                <!--Debut Formulaire-->
                 <div class="col-md-7 offset-md-1 mt-5">
-                    <div class="bg-secondary py-5 w-100 h-100"></div>
+                    <form action="" class="row">
+                        <div class="col-6">
+                            <label for="prenom" class="form-label">Prenom</label>
+                            <input type="text" class="form-control" name="prenom" id="prenom">
+                        </div>
+                        <div class="col-6">
+                            <label for="nom" class="form-label">Nom</label>
+                            <input type="text" class="form-control" name="nom" id="nom">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="adress" class="form-label">Adresse</label>
+                            <input type="text" class="form-control" name="adress" id="adress">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea name="message" id="message" rows="3" class="form-control"></textarea>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+                        </div>
+                    </form>
                 </div>
+                <!--Fin Formulaire-->
             </div>
         </div>
     </section>
-    <footer class="my-5">
+    <footer class="my-5"><!--Cinquieme phase-->
         <div class="container py-5overflow-hidden">
             <div class="row align-items-center">
                 <div class="col-4">
-                    <div class="bg-secondary py-5 w-100 h-100"></div>
+                    <a class="navbar-brand text-uppercase fw-bold" href="portFolio.html">
+                        <span class="bg-primary bg-gradient p-1 rounded-3 text-light">John</span>Doe
+                    </a>
                 </div>
                 <div class="col-4">
-                    <div class="bg-secondary py-5 w-100 h-100"></div>
+                    <a class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#mention">Mention
+                        légales</a>
                 </div>
                 <div class="col-12 col-md-4 text-md-end">
                     <ul class="list-inline">
@@ -280,6 +487,21 @@
                         <li class="list-inline-item"><i class="bi bi-instagram"></i></li>
                         <li class="list-inline-item"><i class="bi bi-twitter"></i></li>
                     </ul>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="mention" tabindex="-1" aria-labelledby="exempleModalLabel">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Mentions Legales</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
                 </div>
             </div>
         </div>
